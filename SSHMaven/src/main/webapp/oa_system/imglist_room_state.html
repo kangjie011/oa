@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+<script type="text/javascript" src="js/year_month_day.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 518			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+	$(".select4").uedSelect({
+		width : 80
+	});
+	
+});
+</script>
+</head>
+
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">产品管理</a></li>
+    <li><a href="#">下架商品</a></li>
+    </ul>
+    </div>
+    
+    <div class="rightinfo">
+ 
+    <div class="formbody">
+    
+    
+    
+    
+     
+    
+    <div class="vocation">
+    <div style="float: left; margin-left: -8px"><select id="selYear" class="select4"></select> </div>
+    <div style="float: left; margin-left: 10px"><select id="selMonth"class="select4" ></select> </div>
+    <div style="float: left; margin-left: 10px"> <select id="selDay" class="select4"></select></div>
+    <div style="float: left; margin-left: 10px"> <select id="selHour" class="select4"></select></div>
+    <div style="float: left; margin-left: 10px"> <select id="selMin" class="select4"></select></div>
+    <div style="float: left; margin-left: 10px  ;">~~</div>
+    <div style="float: left; margin-left: 10px"> <select id="selHour2" class="select4"></select></div>
+    <div style="float: left; margin-left: 10px"> <select id="selMin2" class="select4"></select></div>
+    <input style="float: left; margin-left: 10px" name="" type="button" class="btn" value="时段查询"/>
+   <div style="clear: both;"></div>
+    
+    </div>
+    
+   <script type="text/javascript"> 
+		var selYear = window.document.getElementById("selYear"); 
+		var selMonth = window.document.getElementById("selMonth"); 
+		var selDay = window.document.getElementById("selDay"); 
+		// 新建一个DateSelector类的实例，将三个select对象传进去 
+		new DateSelector(selYear, selMonth, selDay, 2017, 4, 12); 
+		var hour=window.document.getElementById("selHour")
+		for (var i = 1; i <=24;i++) { 
+// 新建一个OPTION对象 
+			var op = window.document.createElement("OPTION"); 
+			// 设置OPTION对象的值 
+			op.value = i; 
+			// 设置OPTION对象的内容 
+			op.innerHTML = i; 
+			// 添加到年份select对象 
+			hour.appendChild(op); 
+		 }
+		var min=window.document.getElementById("selMin")
+		for (var i = 1; i <=59;i++) { 
+// 新建一个OPTION对象 
+			var op = window.document.createElement("OPTION"); 
+			// 设置OPTION对象的值 
+			op.value = i; 
+			// 设置OPTION对象的内容 
+			op.innerHTML = i; 
+			// 添加到年份select对象 
+			min.appendChild(op); 
+		 } 
+		var hour2=window.document.getElementById("selHour2")
+		for (var i = 1; i <=24;i++) { 
+// 新建一个OPTION对象 
+			var op = window.document.createElement("OPTION"); 
+			// 设置OPTION对象的值 
+			op.value = i; 
+			// 设置OPTION对象的内容 
+			op.innerHTML = i; 
+			// 添加到年份select对象 
+			hour2.appendChild(op); 
+		 }
+		var min2=window.document.getElementById("selMin2")
+		for (var i = 1; i <=59;i++) { 
+// 新建一个OPTION对象 
+			var op = window.document.createElement("OPTION"); 
+			// 设置OPTION对象的值 
+			op.value = i; 
+			// 设置OPTION对象的内容 
+			op.innerHTML = i; 
+			// 添加到年份select对象 
+			min2.appendChild(op); 
+		 } 
+		function addM(){
+			var min=parseInt(document.getElementById("ad").value) ;
+			min+=30*1;
+			document.getElementById("ad").value=min;
+		}
+	</script>
+  
+    
+    </div> 
+    
+    
+    
+    <ul class="imglist">
+    <!-- 循环开始每页10个 -->
+    <li style="width:19% ; height: 230px">
+    <div style="padding: 4px;height: 130px"><img src="images/room.jpg" width="100%" height="100%" /></div>
+    
+    <h2><a href="#">苹果</a></h2>
+    
+    <p><a href="#">已上架</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;下架商品</a></p>
+    <br>
+    <p><a href="#">查看详情</a></p>
+    </li>
+    
+     
+   
+    
+    
+    
+    
+    </ul>
+    
+    
+   
+    <div class="pagin">
+    	<div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+        <ul class="paginList">
+        <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+        <li class="paginItem"><a href="javascript:;">1</a></li>
+        <li class="paginItem current"><a href="javascript:;">2</a></li>
+        <li class="paginItem"><a href="javascript:;">3</a></li>
+        <li class="paginItem"><a href="javascript:;">4</a></li>
+        <li class="paginItem"><a href="javascript:;">5</a></li>
+        <li class="paginItem more"><a href="javascript:;">...</a></li>
+        <li class="paginItem"><a href="javascript:;">10</a></li>
+        <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+        </ul>
+    </div>
+        
+    
+    
+  	
+       </div>
+    
+
+    
+
+</body>
+
+</html>

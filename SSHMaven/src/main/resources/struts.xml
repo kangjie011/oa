@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.action.excludePattern" value="/oa_system/.*?" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<package name="" namespace="/" extends="struts-default">
+		<!-- 配置拦截器 -->
+		<interceptors>
+            <interceptor name="login2" class="com.ssh.Interceptor.LoginInterceptor"/>
+            <interceptor-stack name="teamwareStack">
+                <interceptor-ref name="login2"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="teamwareStack"/>
+		<!-- 跳转登录页 -->
+		<action name="change" class="com.ssh.controller.LoginAction" method="change">
+			<result name="success" type="redirect">/oa_system/login.jsp</result>
+		</action>
+		<!-- 登录 -->
+		<action name="login" class="com.ssh.controller.LoginAction" method="login">
+			<result name="success" type="redirect">/oa_system/main.html</result>
+			<result name="error" type="redirect">/oa_system/login.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
