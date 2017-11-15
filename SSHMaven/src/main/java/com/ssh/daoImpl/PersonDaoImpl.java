@@ -30,7 +30,7 @@ public class PersonDaoImpl extends HibernateTemplate implements PersonDao {
 		Calendar calendar = Calendar.getInstance();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String time = sdf.format(calendar.getTime());
-		List list = this.getSessionFactory().getCurrentSession().createSQLQuery("SELECT COUNT(*) FROM person p where p.laifangDate='"+time+"';").list();
+		List list = this.getSessionFactory().getCurrentSession().createSQLQuery("SELECT COUNT(*) FROM person p where p.pvisittime='"+time+"';").list();
 		return list;
 	}
 	

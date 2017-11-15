@@ -28,7 +28,6 @@ public class LoginAction extends ActionSupport implements ModelDriven<User> {
 	private User u = new User();
 	@Override
 	public User getModel() {
-		// TODO Auto-generated method stub
 		return u;
 	}
 	@Resource
