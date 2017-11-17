@@ -13,14 +13,14 @@
 
 	<package name="" namespace="/" extends="struts-default">
 		<!-- 配置拦截器 -->
-		<interceptors>
-            <interceptor name="login2" class="com.ssh.Interceptor.LoginInterceptor"/>
-            <interceptor-stack name="teamwareStack">
-                <interceptor-ref name="login2"/>
-                <interceptor-ref name="defaultStack"/>
-            </interceptor-stack>
-		</interceptors>
-		<default-interceptor-ref name="teamwareStack"/>
+<!-- 		<interceptors> -->
+<!--             <interceptor name="login2" class="com.ssh.Interceptor.LoginInterceptor"/> -->
+<!--             <interceptor-stack name="teamwareStack"> -->
+<!--                 <interceptor-ref name="login2"/> -->
+<!--                 <interceptor-ref name="defaultStack"/> -->
+<!--             </interceptor-stack> -->
+<!-- 		</interceptors> -->
+<!-- 		<default-interceptor-ref name="teamwareStack"/> -->
 		<!-- 跳转登录页 -->
 		<action name="change" class="com.ssh.controller.LoginAction" method="change">
 			<result name="success" type="redirect">/oa_system/login.jsp</result>
@@ -28,7 +28,7 @@
 		<!-- 登录 -->
 		<action name="login" class="com.ssh.controller.LoginAction" method="login">
 			<result name="success" type="redirect">/oa_system/main.html</result>
-			<result name="error" type="redirect">/oa_system/login.jsp</result>
+			<result name="error" type="redirect">/login.jsp</result>
 		</action>
 		
 	</package>
