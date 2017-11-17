@@ -11,7 +11,7 @@ import com.ssh.model.User;
 public class AssistantDaoImpl  extends HibernateDaoSupport implements AssistantDao{
 
 	@Override
-	public String selectOrder(Person p, User u) {
+	public List selectOrder(Person p, User u) {
 		// TODO Auto-generated method stub
 		return null;
 	}

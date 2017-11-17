@@ -13,13 +13,10 @@ public class Person {
 	private int page;
 	private String pphone;
 	private String psex;
-	private String pordertime;
 	private String pstate;
 	private String pschool;
 	private String pmajor;
 	private String peducation;
-	private String pvisittime;
-	private String psigntime;
 	private int pabout;
 	private int ppersonnel;
 	private String filed1;
@@ -72,15 +69,6 @@ public class Person {
 		this.psex = psex;
 	}
 
-	@Column(name = "pordertime")
-	public String getPordertime() {
-		return pordertime;
-	}
-
-	public void setPordertime(String pordertime) {
-		this.pordertime = pordertime;
-	}
-
 	@Column(name = "pstate")
 	public String getPstate() {
 		return pstate;
@@ -115,24 +103,6 @@ public class Person {
 
 	public void setPeducation(String peducation) {
 		this.peducation = peducation;
-	}
-
-	@Column(name = "pvisittime")
-	public String getPvisittime() {
-		return pvisittime;
-	}
-
-	public void setPvisittime(String pvisittime) {
-		this.pvisittime = pvisittime;
-	}
-
-	@Column(name = "psigntime")
-	public String getPsigntime() {
-		return psigntime;
-	}
-
-	public void setPsigntime(String psigntime) {
-		this.psigntime = psigntime;
 	}
 
 	@Column(name = "pabout")
@@ -180,22 +150,18 @@ public class Person {
 		this.filed3 = filed3;
 	}
 
-	public Person(int pid, String pname, int page, String pphone, String psex, String pordertime, String pstate,
-			String pschool, String pmajor, String peducation, String pvisittime, String psigntime, int pabout,
-			int ppersonnel, String filed1, String filed2, String filed3) {
+	public Person(int pid, String pname, int page, String pphone, String psex, String pstate, String pschool,
+			String pmajor, String peducation, int pabout, int ppersonnel, String filed1, String filed2, String filed3) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.page = page;
 		this.pphone = pphone;
 		this.psex = psex;
-		this.pordertime = pordertime;
 		this.pstate = pstate;
 		this.pschool = pschool;
 		this.pmajor = pmajor;
 		this.peducation = peducation;
-		this.pvisittime = pvisittime;
-		this.psigntime = psigntime;
 		this.pabout = pabout;
 		this.ppersonnel = ppersonnel;
 		this.filed1 = filed1;
@@ -203,22 +169,18 @@ public class Person {
 		this.filed3 = filed3;
 	}
 
-	public Person(int pid, String pname, int page, String pphone, String psex, String pordertime, String pstate,
-			String pschool, String pmajor, String peducation, String pvisittime, String psigntime, int pabout,
-			int ppersonnel) {
+	public Person(int pid, String pname, int page, String pphone, String psex, String pstate, String pschool,
+			String pmajor, String peducation, int pabout, int ppersonnel) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.page = page;
 		this.pphone = pphone;
 		this.psex = psex;
-		this.pordertime = pordertime;
 		this.pstate = pstate;
 		this.pschool = pschool;
 		this.pmajor = pmajor;
 		this.peducation = peducation;
-		this.pvisittime = pvisittime;
-		this.psigntime = psigntime;
 		this.pabout = pabout;
 		this.ppersonnel = ppersonnel;
 	}
@@ -230,10 +192,9 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [pid=" + pid + ", pname=" + pname + ", page=" + page + ", pphone=" + pphone + ", psex=" + psex
-				+ ", pordertime=" + pordertime + ", pstate=" + pstate + ", pschool=" + pschool + ", pmajor=" + pmajor
-				+ ", peducation=" + peducation + ", pvisittime=" + pvisittime + ", psigntime=" + psigntime + ", pabout="
-				+ pabout + ", ppersonnel=" + ppersonnel + ", filed1=" + filed1 + ", filed2=" + filed2 + ", filed3="
-				+ filed3 + "]";
+				+ ", pstate=" + pstate + ", pschool=" + pschool + ", pmajor=" + pmajor + ", peducation=" + peducation
+				+ ", pabout=" + pabout + ", ppersonnel=" + ppersonnel + ", filed1=" + filed1 + ", filed2=" + filed2
+				+ ", filed3=" + filed3 + "]";
 	}
 
 }

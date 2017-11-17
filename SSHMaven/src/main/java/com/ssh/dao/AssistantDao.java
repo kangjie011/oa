@@ -7,7 +7,7 @@ import com.ssh.model.User;
 
 public interface AssistantDao {
 	// 二次预约和预约的录入信息
-	public String selectOrder(Person p, User u);
+	public List selectOrder(Person p, User u);
 
 	// 修改状态为流失
 	public String updateLose(Person p);
