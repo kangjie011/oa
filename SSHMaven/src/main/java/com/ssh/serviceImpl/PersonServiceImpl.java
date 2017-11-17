@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ssh.dao.PersonDao;
+import com.ssh.model.Person;
 import com.ssh.service.PersonService;
 
 /**
@@ -20,10 +21,20 @@ import com.ssh.service.PersonService;
 public class PersonServiceImpl implements PersonService {
 	@Autowired
 	PersonDao personDao;
-	@Override
-	public List selectPersonAllByDate() {
-		// TODO Auto-generated method stub
-		return personDao.selectPersonAllByDate();
-	}
-
+//	@Override
+//	public List selectPersonAllByDate() {
+//		// TODO Auto-generated method stub
+//		return personDao.selectPersonAllByDate();
+//	}
+//	@Override
+//	public List twoPhone() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//	@Override
+//	public List selectPersonByDate(String minDay, String maxDay) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+	
 }

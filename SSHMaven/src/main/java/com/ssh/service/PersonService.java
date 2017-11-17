@@ -2,6 +2,8 @@ package com.ssh.service;
 
 import java.util.List;
 
+import com.ssh.model.Person;
+
 /**
  * 
  * 创建时间：2017年11月13日
@@ -11,5 +13,6 @@ import java.util.List;
  *
  */
 public interface PersonService {
-	public List selectPersonAllByDate();
+	
+	
 }
