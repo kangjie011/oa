@@ -31,6 +31,18 @@
 			<result name="error" type="redirect">/login.jsp</result>
 		</action>
 		
+		<!-- 插入员工 -->
+		<action name="addUser" class="com.ssh.controller.ManagerAction" method="addUser">
+			<!-- <result name="success" type="redirect">/oa_system/main.html</result>
+			<result name="error" type="redirect">/login.jsp</result> -->
+		</action>
+		 
+		<!-- 约访成功率 -->
+		<action name="orderSuccessPercent" class="com.ssh.controller.ManagerAction" method="orderSuccessPercent">
+			<!-- <result name="success" type="redirect">/oa_system/main.html</result>
+			<result name="error" type="redirect">/login.jsp</result> -->
+		</action>
+		
 	</package>
 
 </struts>
